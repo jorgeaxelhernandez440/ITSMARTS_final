@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:animateLayoutChanges="true"
+        app:cardCornerRadius="20dp"
+        android:elevation="4dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+          >
+
+            <TextView
+                android:id="@+id/nombretxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textColor="#0B24AC"
+                android:textSize="30dp"
+                app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+            <TextView
+                android:id="@+id/apellidoPatxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0C23A5"
+                android:text="Apellido"
+                android:textSize="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/nombretxt" />
+
+            <Button
+                android:id="@+id/buttoneliminar"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#E15B5B"
+                android:paddingRight="10dp"
+                android:text="eliminar"
+                android:textSize="10dp"
+                android:layout_gravity="center"
+                app:icon="@android:drawable/ic_menu_delete"
+                app:iconSize="15dp"
+                app:iconTint="@color/white"
+                app:iconTintMode="src_in"
+                app:layout_constraintBaseline_toBottomOf="@id/apellidoPatxt" />
+
+            <Button
+                android:id="@+id/buttoneditar"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="-48dp"
+                android:layout_marginEnd="40dp"
+                android:backgroundTint="#3F51B5"
+                android:paddingRight="10dp"
+                android:text="editar"
+                android:textSize="10dp"
+                app:icon="@android:drawable/ic_menu_edit"
+                app:iconSize="15dp"
+                app:iconTint="@color/white"
+                app:iconTintMode="src_in"
+                app:layout_constraintBaseline_toBottomOf="@id/apellidoPatxt" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
